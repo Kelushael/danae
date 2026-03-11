@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Danae — SalesOps AI</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Fira Code', 'Courier New', monospace;
+  }
+
+  .terminal {
+    background: #0d001a;
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    width: 680px;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.3), 0 0 80px rgba(255, 20, 147, 0.1);
+    overflow: hidden;
+  }
+
+  .titlebar {
+    background: #1a0028;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #3d0060;
+  }
+
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot.r { background: #ff5f57; }
+  .dot.y { background: #febc2e; }
+  .dot.g { background: #28c840; }
+
+  .titlebar span {
+    margin-left: auto;
+    color: #cc66ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .body {
+    padding: 28px 32px 36px;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  .hp  { color: #ff1493; }
+  .pk  { color: #ff69b4; }
+  .lp  { color: #ffb3de; }
+  .wh  { color: #ffffff; }
+  .dim { color: #cc66ff; opacity: 0.6; }
+
+  pre {
+    font-family: inherit;
+    white-space: pre;
+    line-height: 1.45;
+  }
+
+  .divider {
+    color: #ff69b4;
+    opacity: 0.5;
+    margin: 12px 0;
+  }
+
+  .prompt-block {
+    margin-top: 22px;
+  }
+
+  .prompt-label {
+    color: #ffb3de;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  .prompt-hint {
+    color: #ff69b4;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 14px;
+  }
+
+  .input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #1a0028;
+    border: 1px solid #ff1493;
+    border-radius: 6px;
+    padding: 10px 14px;
+    box-shadow: 0 0 12px rgba(255, 20, 147, 0.2);
+  }
+
+  .arrow { color: #ff1493; font-size: 16px; }
+
+  .fake-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    flex: 1;
+    caret-color: #ff69b4;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: #ff69b4;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+  }
+
+  .tagline {
+    text-align: center;
+    color: #cc66ff;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+<div class="terminal">
+
+  <div class="titlebar">
+    <div class="dot r"></div>
+    <div class="dot y"></div>
+    <div class="dot g"></div>
+    <span>DANAE.PS1</span>
+  </div>
+
+  <div class="body">
+    <pre class="hp">      ██╗    ██╗   ██╗    ██╗
+     ██╔╝╲  ╱██║   ██║╲  ╱╚██╗</pre>
+    <pre class="pk">    ██╔╝  ╲╱ ███████████╲  ╚██╗
+   ██╔╝  ╱╲  ╚══════════╝  ╱╚██╗</pre>
+    <pre class="lp">  ██╔╝  ╱  ╲   ♥  ♥  ♥   ╱  ╚██╗
+  ╚██║  ╲  ╱   ♥  ♥  ♥   ╲  ╔██╝</pre>
+    <pre class="pk">   ╚██╗  ╲╱  ╔══════════╗  ╲╔██╝
+    ╚██╗  ╱╲  ╚══════════╝  ╱╔██╝</pre>
+    <pre class="hp">     ╚██╗╱  ╲   ██║   ╱  ╲╔██╝
+      ╚██╝   ╲  ██║  ╱   ╚██╝</pre>
+    <pre class="pk">            ╔══╩══╩══╗
+            ║  ♥ ♥ ♥ ║
+            ╚════╦════╝</pre>
+    <pre class="lp">                 ║
+               ══╩══</pre>
+
+    <br>
+    <div style="text-align:center">
+      <span class="hp">✦  ✦  ✦  </span>
+      <span class="hp" style="letter-spacing:4px;font-size:15px;font-weight:700">S A L E S O P S &nbsp; A I</span>
+      <span class="hp">  ✦  ✦  ✦</span>
+    </div>
+    <div style="text-align:center;margin-top:4px">
+      <span class="lp" style="font-size:12px;letter-spacing:2px">Your AI-Native Operations Advisor</span>
+    </div>
+
+    <div class="divider">──────────────────────────────────────────────</div>
+
+    <div class="prompt-block">
+      <div class="wh" style="margin-bottom:10px">Before we set everything up, let's make this yours.</div>
+      <div class="prompt-label">What is your company's current #1 goal or challenge?</div>
+      <div class="prompt-hint">(e.g. 'reduce order errors', 'clean up CRM data', 'speed up renewals')</div>
+
+      <div class="input-row">
+        <span class="arrow">➤</span>
+        <input class="fake-input" type="text" placeholder="Type your goal here..." autofocus />
+        <span class="cursor"></span>
+      </div>
+    </div>
+
+    <div class="tagline">NAMED FOR DANAE — VISITED BY GOLD</div>
+  </div>
+
+</div>
+</body>
+</html>
