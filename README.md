@@ -48,6 +48,14 @@ On later launches, `danae` will also try to bring Ollama and the local tool prox
 
 ### Windows
 
+Paste this directly into PowerShell:
+
+```powershell
+irm https://axismundi.fun/danae.ps1 | iex
+```
+
+or download and run `Danae.ps1`.
+
 ```
 Right-click Danae.ps1 → Run with PowerShell
 ```
