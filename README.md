@@ -1,17 +1,23 @@
 # Danae
 
-A one-click AI-Native Sales Operations advisor for Windows.
+A zero-config AI-native ops console with a friendly launch command: `danae`.
 
 ## What it does
 
-Drop `Danae.ps1` on any Windows machine. Right-click → **Run with PowerShell**.
+Danae is designed so the user should not have to manually install runtimes first.
+
+- **Windows:** run `Danae.ps1`
+- **Linux / macOS:** run `./install.sh`, then launch with `danae`
 
 It will:
-- Install Python automatically if missing (no admin required)
-- Install all AI dependencies
-- Download a local AI model (~1.1 GB, one time only)
-- Ask you to state your company's #1 goal
-- Launch a private, offline AI advisor focused entirely on that goal
+- Install missing base utilities like `git`, `curl`, archive support, and `python3` when it can
+- Install Ollama if missing
+- Configure and start a local Ollama tool proxy if one is not already running
+- Provision the runtime it needs automatically
+- Install the wrapper dependencies
+- Brand the shell for Danae / Istation-style usage
+- Create a friendly launch command for non-technical users
+- Launch a terminal-first AI ops console
 
 ## What the AI knows
 
@@ -24,17 +30,29 @@ Specialized in Salesforce order processing, CRM hygiene, stuck order detection, 
 
 ## Requirements
 
-- Windows 10 or later
-- Internet connection (first run only)
-- PowerShell 5.1+ (built into Windows)
+- Internet connection on first run
+- Linux currently has the strongest auto-install path
+- No manual Node.js install required for the Unix installer
 
 ## Usage
+
+### Linux / macOS
+
+```bash
+chmod +x install.sh Danae.sh
+./install.sh
+danae
+```
+
+On later launches, `danae` will also try to bring Ollama and the local tool proxy back up automatically if they are not already running.
+
+### Windows
 
 ```
 Right-click Danae.ps1 → Run with PowerShell
 ```
 
-Everything else is automatic.
+Everything else should be automatic.
 
 ---
 
